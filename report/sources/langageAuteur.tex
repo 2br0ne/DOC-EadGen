@@ -1,1 +1,28 @@
-\subsubsection{}
+L'objectif principal du langage auteur dans Eadgen est de simplifier
+la tache des utilisateurs de l'environnement. En effet, le but de 
+l'environnement étant, en partie, de simplifier la génération de document
+XML, le langage doit rester le plus simple et le plus sobre possible. Il 
+est également nécessaire de concevoir un langage le plus extensible possible
+pour couvrir un maximum de ressources pédagogiques. 
+
+Ainsi, tout les éléments du langage sont simplifiées au maximum. L'élément 
+choisi pour représenter les informations contenues dans le document est 
+la balise. Chaque balise doit se trouver en début de ligne et est précédée
+du symbole \og \$ \fg, ceci la rendant plus lisible. Syntaxiquement, une 
+balise est constituée de trois éléments : 
+\begin{itemize}
+	\item \emph{son nom} ;
+	\item \emph{un champ de méta-données} optionnel ; 
+	\item \emph{un paramètre principal} optionnel.
+\end{itemize}
+La \emph{portée} d'une balise, c'est-à-dire les données sur lesquelles
+elle influe, est définie par un système de priorité. Le système est très 
+simple puisqu'il fonctionne en suivant la règle : \emph{L'effet de la 
+balise perdure, jusqu'à rencontre d'une balise plus importante qu'elle}.
+
+Une balise est donc de la forme : \\
+\texttt{\$sonNom (ses méta-données) son paramètre principal}
+
+Les méta-données d'une balise sont des informations qui n'apparaissent
+pas dans le document-cible mais qui sont néanmoins nécessaires. Le paramètre
+principal peut correspondre à un titre ou une information supplémentaire.
