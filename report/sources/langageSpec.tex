@@ -1,0 +1,27 @@
+Comme expliqué précédemment, le responsable de la collection est en 
+charge de la liste des balises disponibles et de la sémantique
+correspondante. Un langage de spécifications de ses balises doit
+donc etre mis à disposition de l'utilisateur de l'environnement.
+
+Il s'agit ainsi de construire le vocabulaire et la sémantique
+du langage utilisé par l'auteur. Pour cela, Eadgen propose de délivrer
+simplement un prototype de chaque balise dans lequel les trois
+composantes de la balise sont définies, ainsi que les règles
+de traitements pour la création du document XML. En dernier, le
+nom du fichier XSL-template correspondant à la balise. 
+
+Voyons un exemple simple de définition de cette balise : 
+\begin{verbatim}
+	<Balise
+		nom = «tox» priorité = «50»
+		concerne = «nom du produit concerne»
+		porte = «consignes de sécurité associées»
+		detecte_occurrence= «bulle»
+		cree_bulle_avec= «contenu»
+		table_associée = «Produits Toxiques»
+		references_croisée = «oui»
+		nom_xml= «prodtox»
+	/>
+\end{verbatim} 
+On retrouve bien ici une syntaxe XML. La définition de ce langage est
+en effet écrite dans un document XML par le responsable de collection.
