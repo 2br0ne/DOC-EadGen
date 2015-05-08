@@ -2,25 +2,23 @@ EadGen est un environnement auteur, il s'agit d'un logiciel facilitant la produc
 
 \subsection{Les documents produits}
 
-\paragraph{}La production de documents pédagogiques en ligne ne peut se limiter aux simples publications des supports de cours car ceux-ci ne sont que des supports, des compléments, comme l'indique leur désignation. 
+\paragraph{}La production de documents pédagogiques en ligne ne peut se limiter aux simples publications des supports de cours car ceux-ci ne sont que des compléments. 
 
-Il faut donc, pour obtenir des cours efficaces, mettre à disposition de l'apprenant tout ce dont il a besoin, c'est à dire aussi bien les exercices que des auto-évaluations. Il faut aussi y ajouter toutes les information transmises oralement par l'enseignant. 
+Il faut donc, pour obtenir des cours efficaces, mettre à disposition de l'apprenant tout ce dont il a besoin, c'est à dire aussi bien les exercices que des auto-évaluations. Il faut aussi y ajouter toutes les informations transmises oralement par l'enseignant. 
 
 La médiatisation d'un document est la transformation de ces informations pour qu'elles apparaissent dans la production finale en ligne. 
 
 \paragraph{}Toutes ces informations sont trop imprévisibles et changeantes d'un cours à l'autre. Il est impossible d'automatiser et de généraliser un processus permettant la médiatisation de l'ensemble dans un format interactif convenable pour l'apprenant. 
 
-Il est alors nécessaire d’allouer une grande partie du temps de production de la ressource pédagogique dans la conception, c'est à dire en utilisant des techniques de production automatisées mais paramétrables au maximum.
+Il est alors nécessaire d’allouer une grande partie du temps de production de la ressource pédagogique dans la conception, en utilisant des techniques de production automatisées mais paramétrables au maximum.
 
 \subsection{Méthodes existantes}
 \subsubsection{Production page par page}
 \paragraph{}Il s'agit d'une méthode donnant de très bons résultats grâce à une médiatisation très complète des documents. Il s'agit d'une production spécifique à chaque leçon, permettant la plus grande fidélité avec des besoins de l'enseignant. 
 
-\paragraph{}C'est par contre une méthode extrêmement gourmande en temps afin d'obtenir un résultat particulier pour chaque page, un généralisation conduisant à la perte des subtilités d'une leçon par rapport à une autre. 
+\paragraph{}C'est par contre une méthode extrêmement gourmande en temps afin d'obtenir un résultat particulier pour chaque page, une généralisation conduisant à la perte des subtilités d'une leçon par rapport à une autre. 
 
-La maintenance est elle aussi particulièrement délicate, en effet un changement un minimum significatif entraîne quasiment la ré-élaboration de la page. 
-
-De plus, une évolution dans le modèle de navigation, la charte graphique ou autre élément général du site entraîne la mise à jour manuelle de la totalité des pages ainsi produites, donc un temps considérable.   
+La maintenance est elle aussi particulièrement délicate, en effet un changement un minimum significatif tant dans le contenu que dans le modèle de navigation ou la charte graphique entraîne la ré-élaboration des pages, donc un temps considérable. 
 
 \subsubsection{Pages dynamiques}
 \paragraph{}Cette technique repose sur l'utilisation de scripts par le serveur permettant de réaliser algorithmiquement les pages. Les données représentées sont alors fortement structurées et doivent répondre à un schéma global. 
@@ -29,9 +27,9 @@ Si cette forte structuration peut convenir à certaines disciplines scientifique
 
 \paragraph{}L'avantage de cette technique concerne l'adaptabilité. Une fois les scripts de création des pages opérationnels, un ajout de page, une modification mineure ou majeure, la maintenance s'exécutent rapidement et simplement. 
 
-Par contre la modification de ces scripts pour intégrer par exemple de nouvelles catégories de notions est bien plus coûteuse car requière de réelles compétences de programmation.
+Par contre la modification de ces scripts pour intégrer par exemple de nouvelles catégories de notions est bien plus coûteuse en re-programmation.
 
-\paragraph{}L'inconvénient de cette technologie réside dans sa généralisation à l'extrême.Il est en effet extrêmement coûteux d'ajouter à ces scripts des fonctionnalités autres que la simple répétition d'actions dans un cadre défini. Il faut alors des spécialistes en informatique présentant aussi des compétences en communication. 
+\paragraph{}L'inconvénient de cette technologie réside dans sa généralisation à l'extrême.Il est en effet extrêmement coûteux d'ajouter à ces scripts des fonctionnalités autres que la simple répétition d'actions dans un cadre défini.
 
 \subsubsection{Transformation de structure}
 \paragraph{}Située entre les deux techniques précédentes, la transformation de structure repose sur l'utilisation du langage \texttt{XSL-T}. Ce langage sert à spécifier des transformation de structure entre un langage source: le \texttt{XML} et un langage cible, par exemple le \texttt{HTML}. 
@@ -40,6 +38,6 @@ Grâce à cet outil, la production des pages cibles avec l'utilisation de leur c
 
 Cette technique permet de conserver la flexibilité de la production page par page tout en exploitant l'économie des pages dynamiques. Il s'agit de la technique suggérée par W3C.
 
-\paragraph{}Le problème de cette méthode est liée au langage de spécification du contenu: le \texttt{XML} qui est presque aussi lourd à l'écriture que le \texttt{HTML}. De même que la production des fichiers \texttt{XSL-T} demande presque autant de compétences que la production de scripts des pages dynamiques.
+\paragraph{}Le problème de cette méthode est lié au langage de spécification du contenu: le \texttt{XML} qui est presque aussi lourd à l'écriture que le \texttt{HTML}. De même la production des fichiers \texttt{XSL-T} demande presque autant de compétences que la production de scripts des pages dynamiques.
 
 Une solution est donc de proposer un intermédiaire au \texttt{XML} pour l'utilisateur, en proposant un langage plus simple et léger. L'encapsulation du \texttt{XML} permet alors de continuer à tirer partie de la puissance du langage sans en subir les inconvénients. 
