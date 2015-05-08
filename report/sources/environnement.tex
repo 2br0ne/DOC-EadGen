@@ -1,0 +1,32 @@
+EadGen est utilisable en ligne par l'ensemble des personnes intervenant sur un document. De l'auteur au responsable de collection en passant par les graphistes et autres membres, la production doit rester accessible.
+
+\subsection{Fondements de Eadgen}
+
+Contrairement aux méthodes existantes, EadGen propose un langage auteur ouvert reposant sur XML. Ceci permet à chaque membre intervenant sur la chaine de production de paramétrer l'outil selon son expertise et ses besoins relatifs aux outils qu'il utilise.
+
+La chaine de production repose essentiellement sur les spécifications établies entre les auteurs, qui fournissent la matière première pédagogique, et le responsable de collection. Ils vont établir ensemble le besoin de médiatisation du document.
+
+EadGen permet ici via des pré-traitements d'éviter l'emploi trop lourd du XML grâce à son langage auteur ouvert comme l'on pourrait le faire en HTML.
+
+\subsection{Production basée sur XSL-T}
+
+Produire un document c'est convertir une structure source, la matière première pédagogique, en structure cible : le document produit où l'on mettra en avant l'organisation pédagogique et l'interaction.
+
+L'automatisation de cette production implique de modéliser ces structures et spécifier leurs règles de transformation. De plus, pour une même collection, la structure cible aura toujours le même modèle, quelque soit le contenu de la source. C'est là qu'intervient le langage de transformation XSL-T.
+
+\subsection{Architecture et Fonctionnement}
+
+\paragraph{}
+Ici, la chaine de production permet de simplifier la définition du langage auteur extensible et la production du HTML cible. Pour une collection donnée, le responsable va avec les auteurs retenir les concepts importants pour la médiatisation de leurs cours et créer un jeu de balises associé.
+
+Ensuite, avec un graphiste, le responsable va définir l'action des balises sur la production finale toujours grâce à EadGen qui va convertir une maquette HTML en xsl-template qui permettra la traduction du XML source en HTML final.
+
+Double avantage, l'auteur dispose d'un fort pouvoir d'expression grâce au balisage léger, puis ces balises sont converties par le compilateur en XML puis en HTML automatiquement.
+
+\paragraph{}
+Pour illustrer la puissance du langage ouvert EadGen, un exemple pour un cours de chimie est donné. L'enseignant souhaite appuyer la dangerosité de certains produits dans les cours et exercices interactifs. Il définit alors avec le responsable de collection une balise "\$tox" qui produira une alerte.
+
+Après introduction de cette balise dans le vocabulaire du langage, l'auteur n'aura à définir qu'une seule fois : \texttt{\$tox chlore}, dans une de ses productions sources pour que l'alerte se retrouve dans chaque occurrence du mot "chlore" dans n'importe quel document cible. Cette alerte sera présentée de la manière retenue par le graphiste dans sa maquette au sein du document final via le processus présenté plus haut.
+
+\paragraph{}
+La puissance de EadGen repose donc dans la séparation du contenu et de la forme finale grâce au langage de balises léger et à la création simplifiée des transformations XSL-T à partir de maquettes. Cela permet de plus de prévenir les problèmes liés aux différents supports cibles, navigateurs ou imprimantes, en spécifiant plusieurs maquettes. La médiatisation peut donc être automatique et transcrire clairement les éléments de pédagogie de l'auteur.

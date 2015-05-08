@@ -1,36 +1,32 @@
-Le fonctionnement de l'environnement EadGen se divise en un certain
-nombre de phases qui correspondent à chaque étapes de la création 
-du document HTML final. 
-
 \subsubsection{Du document en langage auteur au document XML}
 
-Comme nous l'avons vu précédemment, chaque document est écrit dans
-un langage spécifique à l'environnement Eadgen. Il est ainsi 
-composé de balises formant un arbre. Le responsable de collection 
-a, quant à lui, définit dans un fichier XML les balises utilisées
-dans le langage auteur. Les traitements sémantiques et les aspects 
-plus techniques sont ainsi réalisés par le responsable de collection 
-et l'auteur du document n'a ainsi aucune difficulté à écrire son 
-document. 
+Chaque document est donc écrit dans
+un langage spécifique à l'environnement Eadgen. Il est ainsi
+composé de balises formant un arbre. Le responsable de collection
+a définit dans un fichier XML les balises utilisées
+dans le langage auteur. Les traitements sémantiques et les aspects
+plus techniques sont ainsi réalisés par le responsable de collection
+et l'auteur du document n'a ainsi aucune difficulté à écrire son
+document.
 
-Le traducteur Eadgen va s'employer à transformer ces documents 
+Le traducteur Eadgen va s'employer à transformer ces documents
 écrits en langage auteur en document XML, bien formés au sens de
 XML et conforme à la DTD formée par le fichier XML créé par le responsable
-de collection. La structure du document XML ainsi formé correspond
-donc exactement à la structure de l'arbre définit par l'auteur. 
+de collection. La structure du document XML ainsi formée correspond
+donc exactement à la structure de l'arbre définit par l'auteur.
 
 \subsubsection{Du document XML au document HTML}
 
 Eadgen a aussi pour objectif de convertir les données des documents
 XML en document HTML lisible, par exemple sur le web. La production de
-ces documents HTML se fait via l'utilisation de XSL-T. C'est grace à 
+ces documents HTML se fait via l'utilisation de XSL-T. C'est grace à
 ce dernier que nous allons pouvoir transformer des sous-arbres de documents
-XML en sous-arbres HTML. 
+XML en sous-arbres HTML.
 
 Léger inconvénient néanmoins : l'écriture de document XSL-T est très lourde.
 C'est pourquoi Eadgen est équipé d'un second pré-processeur qui a pour role
-de transformer en XSL-template les maquettes que le graphiste fournit au 
+de transformer en XSL-template les maquettes que le graphiste fournit au
 format HTML. Une convention a été mise en place pour que ce dernier puisse
-indiquer, via les commentaires, que tel modèle sert pour telle balise. 
+indiquer, via les commentaires, que tel modèle sert pour telle balise.
 
-C'est une syntaxe simple et satisfaisante pour répondre à cette problématique. 
+C'est une syntaxe simple et satisfaisante pour répondre à cette problématique.
