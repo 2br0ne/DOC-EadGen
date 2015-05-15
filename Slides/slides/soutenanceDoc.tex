@@ -1,0 +1,92 @@
+\documentclass[11pt, handout]{beamer}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usetheme{Rochester}
+\definecolor{structcoul}{rgb}{0.82,0.2,0.2}
+%%\setbeamercolor{structure}{fg=structcoul, bg=structcoul!40}
+% \setbeamertemplate{footline}{
+% \leavevmode%
+% \hbox{\hspace*{-0.12cm}
+% \begin{beamercolorbox}[wd=.802\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+% 	\usebeamerfont{section in head/foot}\insertshorttitle
+% \end{beamercolorbox}%
+% \begin{beamercolorbox}[wd=.21\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+% 	\usebeamerfont{section in head/foot}\insertshortdate{}\hspace*{1em}
+% 	\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+% \end{beamercolorbox}}%
+% }
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.40\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertauthor \
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+\title[EadGen]{EadGen, un environnement ouvert de production en ligne basé sur 
+XML et XSL-T}
+%\subtitle{sous-titre}
+\author{Julien Baron, Grégoire Gutzwiller, \\ Guillaume Minette de Saint-Martin}
+\date[18/05/2015]{Lundi 18 Mai 2015}
+\titlegraphic{\includegraphics[scale=0.20]{resources/logoInsa.jpeg}}
+
+\logo{\includegraphics[scale=0.06]{resources/logoInsa.jpeg}}
+
+\begin{document}
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+%%%%%%% LE SOMMAIRE
+\author{Grégoire Gutzwiller}
+\section*{Sommaire}
+\begin{frame}
+	\frametitle{Sommaire}
+	\tableofcontents
+\end{frame}
+
+%%%%%%% L'INTRODUCTION
+\section{Introduction}
+\input{slides/introduction.tex}
+
+%%%%%%% CONTEXTE
+\author{Guillaume Minette de Saint-Martin}
+\section{Contexte et Objectifs}
+\input{slides/contexte.tex}
+
+%%%%%%% ENVIRONNEMENT
+\author{Julien Baron}
+\section{L'environnement EadGen}
+\input{slides/environnement.tex}
+
+%%%%%%% LANGAGES
+\author{Grégoire Gutzwiller}
+\section{Conception et traitement des langages}
+\input{slides/langages.tex}
+
+%%%%%%% DEMONSTRATION
+\author{Julien Baron}
+\section{Démonstration}
+\input{slides/demonstration.tex}
+
+%%%%%%% CONCLUSION
+\author{Guillaume Minette de Saint-Martin}
+\section{Conclusion}
+\input{slides/conclusion.tex}
+
+\end{document}
